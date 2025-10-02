@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>শুভ বিজয়া শুভেচ্ছা</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Subtle, low‑opacity animated background layers -->
+  <canvas id="bg" class="bg-canvas" aria-hidden="true"></canvas>
+  <canvas id="petals" class="fx-canvas" aria-hidden="true"></canvas>
+
+  <main class="app">
+    <!-- Landing -->
+    <section id="landing" class="screen active" aria-label="Landing">
+      <div class="wrap">
+        <h1 class="title">শুভ বিজয়া</h1>
+        <p class="sub">নাম লিখুন — একটি মাত্র অ্যানিমেটেড শুভেচ্ছা দেখানো হবে।</p>
+        <form id="startForm" class="form">
+          <input id="name" class="input" type="text" autocomplete="name" placeholder="নাম লিখুন (যেমন: ঋতব্রত)" required />
+          <button class="btn primary" type="submit">শুভেচ্ছা দেখান</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Dashboard: one animated wish -->
+    <section id="dash" class="screen" aria-label="Dashboard" hidden>
+      <div class="wrap">
+        <div class="halo"></div>
+        <h2 class="hello"><span id="helloName">প্রিয় অতিথি</span>, <span class="bijoya">শুভ বিজয়া!</span></h2>
+
+        <div class="card pop-in" id="wishCard">
+          <p id="wish" class="wish wish-type" data-text=""></p>
+          <div class="glints" aria-hidden="true"></div>
+          <div class="actions">
+            <button id="back" class="btn subtle" type="button">পেছনে</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
